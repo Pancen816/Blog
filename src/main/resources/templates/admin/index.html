@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/header::head-fragment('Blog-首页','index')">
+
+</head>
+<body>
+
+<!--导航-->
+<nav th:replace="admin/header::nav-fragment(0)"></nav>
+<!--中间内容-->
+<div  class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui success large  message">
+            <h3>Hi,</h3>
+            <p>Brucer，欢迎登录！</p>
+        </div>
+
+        <img src="/images/1005.jpg" alt="" class="ui rounded bordered fluid image">
+    </div>
+</div>
+
+<br>
+<br>
+<!--底部footer-->
+<footer th:replace="admin/footer::footer-fragment"></footer>
+
+<!--jQuery-->
+<script src="/js/jquery-2.2.3.min.js"></script>
+<!--Semantic-->
+<script src="/js/semantic.min.js"></script>
+
+<script>
+
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown({
+        on: 'hover'
+    });
+</script>
+</body>
+</html>
